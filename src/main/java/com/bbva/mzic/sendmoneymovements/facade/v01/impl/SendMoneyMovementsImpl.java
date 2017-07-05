@@ -40,12 +40,4 @@ public class SendMoneyMovementsImpl extends RestClient<DtoPaymentByFlapRequest, 
 		msj.setMessage("Ocurrio un Error : " + msj);
 		return msj;
 	}
-	
-	public static void main(String[] args) {
-		SendMoneyMovementsImpl test = new SendMoneyMovementsImpl();
-		
-		NotResponse res = test.petitionPost("http://localhost:8080/", "zic/sendMoneyMovements/V03/sendTransactionFlap");
-		System.out.println(res);
-	}
-
 }
