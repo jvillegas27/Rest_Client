@@ -1,0 +1,6 @@
+#Ignorar archivos en el repo
+*.classpath
+*.project
+.settings
+.springBeans
+target

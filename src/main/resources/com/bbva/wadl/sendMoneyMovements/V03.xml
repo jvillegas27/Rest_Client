@@ -1,0 +1,22 @@
+<application xmlns="http://wadl.dev.java.net/2009/02" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:prefix1="urn:com:bbva:mzic:sendmoneymovements:facade:v01:dto"><grammars><xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="urn:com:bbva:mzic:sendmoneymovements:facade:v01:dto" attributeFormDefault="unqualified" elementFormDefault="unqualified" targetNamespace="urn:com:bbva:mzic:sendmoneymovements:facade:v01:dto">
+    <xs:element name="Money" type="tns:DtoMoney"/>
+    <xs:element name="PaymentByFlapRequest" type="tns:DtoPaymentByFlapRequest"/>
+    <xs:complexType name="DtoPaymentByFlapRequest">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="movementId" type="xs:string"/>
+            <xs:element minOccurs="0" name="movementReferenceNumber" type="xs:string"/>
+            <xs:element minOccurs="0" name="originTelephoneNumber" type="xs:string"/>
+            <xs:element minOccurs="0" name="destinationTelephoneNumber" type="xs:string"/>
+            <xs:element minOccurs="0" name="message" type="xs:string"/>
+            <xs:element minOccurs="0" name="accountNumber" type="xs:string"/>
+            <xs:element minOccurs="0" name="statusMovement" type="xs:string"/>
+            <xs:element minOccurs="0" name="amount" type="tns:DtoMoney"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:complexType name="DtoMoney">
+        <xs:sequence>
+            <xs:element minOccurs="0" name="amount" type="xs:long"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+</grammars><resources base="http://localhost:8080/zic/sendMoneyMovements"><resource path="/V03" id="com.bbva.mzic.sendmoneymovements.facade.v01.impl.SrvSendMoneyMovementsV03"><resource path="/sendTransactionFlap"><method name="POST" id="sendTransactionFlap"><request><representation mediaType="application/json" element="prefix1:PaymentByFlapRequest"/></request><response status="204"></response></method></resource><resource path="/{idPaymentByFlapResponse}/PaymentByFlapRequests"><method name="POST" id="createTransactionByFlap"><request><representation mediaType="application/json" element="prefix1:PaymentByFlapRequest"/></request><response><representation mediaType="application/json"><param name="result" style="plain" type="xs:string"/></representation></response></method></resource></resource></resources></application>
