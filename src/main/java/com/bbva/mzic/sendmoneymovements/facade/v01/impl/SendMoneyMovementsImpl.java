@@ -1,4 +1,4 @@
-package com.bbva.mzic.utils;
+package com.bbva.mzic.sendmoneymovements.facade.v01.impl;
 
 import java.io.IOException;
 
@@ -7,10 +7,12 @@ import javax.ws.rs.WebApplicationException;
 import com.bbva.mzic.sendmoneymovements.facade.v01.dto.DtoMoney;
 import com.bbva.mzic.sendmoneymovements.facade.v01.dto.DtoPaymentByFlapRequest;
 import com.bbva.mzic.sendmoneymovements.facade.v01.dto.ObjectFactory;
+import com.bbva.mzic.utils.NotResponse;
+import com.bbva.mzic.utils.RestClient;
 import com.fasterxml.jackson.core.JsonParseException;
 import com.fasterxml.jackson.databind.JsonMappingException;
 
-public class SendMoneyMovementsTest extends RestClient<DtoPaymentByFlapRequest, NotResponse>{
+public class SendMoneyMovementsImpl extends RestClient<DtoPaymentByFlapRequest, NotResponse>{
 
 	@Override
 	protected DtoPaymentByFlapRequest createFactory() {
@@ -40,7 +42,7 @@ public class SendMoneyMovementsTest extends RestClient<DtoPaymentByFlapRequest, 
 	}
 	
 	public static void main(String[] args) {
-		SendMoneyMovementsTest test = new SendMoneyMovementsTest();
+		SendMoneyMovementsImpl test = new SendMoneyMovementsImpl();
 		
 		NotResponse res = test.petitionPost("http://localhost:8080/", "zic/sendMoneyMovements/V03/sendTransactionFlap");
 		System.out.println(res);
