@@ -14,18 +14,18 @@ public class SrvSendMoneyMovementsV03 {
 
     @POST
     @Consumes("application/json")
-    @Path("/sendTransactionFlap")
-    public void sendTransactionFlap() {
+    @Produces("application/json")
+    @Path("/createTransactionByFlap")
+    public Response createTransactionByFlap() {
         //TODO: implement
+        return null;
     }
 
     @POST
     @Consumes("application/json")
-    @Produces("application/json")
-    @Path("/{idPaymentByFlapResponse}/PaymentByFlapRequests")
-    public Response createTransactionByFlap() {
+    @Path("/sendTransactionFlap")
+    public void sendTransactionFlap() {
         //TODO: implement
-        return null;
     }
 
 }

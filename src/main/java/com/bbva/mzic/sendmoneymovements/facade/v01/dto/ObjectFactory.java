@@ -35,6 +35,14 @@ public class ObjectFactory {
     }
 
     /**
+     * Create an instance of {@link DtoPaymentByFlapRequest }
+     * 
+     */
+    public DtoPaymentByFlapRequest createDtoPaymentByFlapRequest() {
+        return new DtoPaymentByFlapRequest();
+    }
+
+    /**
      * Create an instance of {@link DtoMoney }
      * 
      */
@@ -43,11 +51,11 @@ public class ObjectFactory {
     }
 
     /**
-     * Create an instance of {@link DtoPaymentByFlapRequest }
+     * Create an instance of {@link DtoPaymentByFlapResponse }
      * 
      */
-    public DtoPaymentByFlapRequest createDtoPaymentByFlapRequest() {
-        return new DtoPaymentByFlapRequest();
+    public DtoPaymentByFlapResponse createDtoPaymentByFlapResponse() {
+        return new DtoPaymentByFlapResponse();
     }
 
     /**
