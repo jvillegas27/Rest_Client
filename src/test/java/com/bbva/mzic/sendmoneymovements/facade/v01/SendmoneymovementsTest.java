@@ -2,19 +2,14 @@ package com.bbva.mzic.sendmoneymovements.facade.v01;
 
 import org.junit.Assert;
 import org.junit.Before;
-import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.runners.MockitoJUnitRunner;
-import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.AnnotationConfigApplicationContext;
-import org.springframework.core.env.Environment;
 
 import com.bbva.mzic.sendmoneymovements.facade.v01.dto.DtoPaymentByFlapResponse;
 import com.bbva.mzic.sendmoneymovements.facade.v01.impl.CreateTransactionByFlapImpl;
 import com.bbva.mzic.sendmoneymovements.facade.v01.impl.SendMoneyMovementsImpl;
 import com.bbva.mzic.utils.NotResponse;
-import com.bbva.spring.AppConfig;
 import com.bbva.util.TestUtilContext;
 
 @RunWith(MockitoJUnitRunner.class)

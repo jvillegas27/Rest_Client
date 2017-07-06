@@ -31,8 +31,8 @@ public class TestSendMoneyMovements {
 			request.setOriginTelephoneNumber("1234567");
 			request.setStatusMovement("1");
 			
-			String authorizationHeader = "Basic "
-					+ "TXVsdGlwYWdvc0FQUDpzYmZQTnF1UFRVRjE1azNCbG1tRzNFMDN3R1hoMTBBM0k1dXpLdHA2";
+//			String authorizationHeader = "Basic "
+//					+ "TXVsdGlwYWdvc0FQUDpzYmZQTnF1UFRVRjE1azNCbG1tRzNFMDN3R1hoMTBBM0k1dXpLdHA2";
 			
 			WebClient client = WebClient
 					.create("http://localhost:8080/", Collections.singletonList(new JacksonJsonProvider()))
