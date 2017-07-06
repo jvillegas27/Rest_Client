@@ -3,7 +3,6 @@ package com.bbva.mzic.sendmoneymovements.facade.v01.impl;
 import java.io.IOException;
 
 import javax.ws.rs.WebApplicationException;
-import javax.ws.rs.core.Response;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

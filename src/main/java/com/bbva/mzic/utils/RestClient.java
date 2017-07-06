@@ -19,6 +19,9 @@ public abstract class RestClient<T,R> {
 	
 	private Log log = LogFactory.getLog(RestClient.class);
 	
+	/**
+	 * Sirve para generar 
+	 * @return Regresa Objeto salida de la implementacion */
 	protected abstract T createFactory();
 	
 	protected abstract R buildErrorRequest( WebApplicationException ex) throws JsonParseException, JsonMappingException, IOException;
